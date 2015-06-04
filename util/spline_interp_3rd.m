@@ -66,7 +66,7 @@ function [coefficients, regions] = spline_interp_3rd(X, Y, cnd_type, l, r, plot)
     end
 end
 function plot_result(X, Y, coefficients, regions)
-    clf;
+    figure;
     hold on;
     plot(X, Y, 'ro');
     for i=1:size(regions, 2)
