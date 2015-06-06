@@ -4,7 +4,7 @@
 % type 使用的多项式类型。
 %   simple 使用1, x, x^2....x^n这组多项式，逼近区间为[0, 1].
 %   legendre 使用勒让德多项式逼近，逼近区间为[-1, 1].
-% 返回值，每个基的系数。
+% 返回值，coefficients 每个基函数的系数。
 function coefficients=best_squar_poly_approx(f, order, type, is_plot, caption)
     d=zeros(order+1, 1);
     if strcmp(type, 'simple')
@@ -42,3 +42,4 @@ function coefficients=best_squar_poly_approx(f, order, type, is_plot, caption)
         legend('原函数', '逼近结果');
     end
 end
+
