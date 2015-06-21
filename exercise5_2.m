@@ -1,11 +1,15 @@
+% 矩阵阶数。
 n=5;
-A = orth(randn(n));
-B = diag(randn(n, 1));
-M=A'*B*A;
+% 生成对称正定系数矩阵A.
+Q=orth(randn(n));
+D=diag(randn(n, 1));
+A=Q'*B*Q;
+% 右端向量b.
 b=randn(n, 1);
 disp('A=');
 disp(A);
 disp('b=');
 disp(b);
 disp('x=');
-disp(square_root_improve(M, b));
+% 使用改进平方根算法求解并打印结果。
+disp(square_root_improve(A, b));
