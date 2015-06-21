@@ -1,0 +1,11 @@
+n=5;
+A = orth(randn(n));
+B = diag(randn(n, 1));
+M=A'*B*A;
+b=randn(n, 1);
+disp('A=');
+disp(A);
+disp('b=');
+disp(b);
+disp('x=');
+disp(square_root_improve(M, b));
