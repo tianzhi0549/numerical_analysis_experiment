@@ -3,7 +3,7 @@ n=5;
 % 生成对称正定系数矩阵A.
 Q=orth(randn(n));
 D=diag(randn(n, 1));
-A=Q'*B*Q;
+A=Q'*D*Q;
 % 右端向量b.
 b=randn(n, 1);
 disp('A=');
